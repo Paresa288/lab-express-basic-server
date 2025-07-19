@@ -8,7 +8,6 @@ const morgan = require("morgan");
 // CREATE EXPRESS APP
 // Here you should create your Express app:
 const app = express();
-app.listen(5005)
 
 
 // MIDDLEWARE
@@ -27,6 +26,10 @@ app.get("/", (req, res, next) => {
   res.sendFile(__dirname + "/views/home.html");
 })
 
+app.get("/blog", (req, res, next) => {
+  res.sendFile(__dirname + "/views/blog.html");
+})
 
 // START THE SERVER
 // Make your Express server listen on port 5005:
+app.listen(5005)
